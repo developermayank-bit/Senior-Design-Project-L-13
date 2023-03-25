@@ -11,6 +11,7 @@ def getWeatherData(city_name):
 
     response = requests.get(url, params=params)
     if 'error' not in response.json():
+
         data = response.json()
         Result = dict()
         Result['humidity']=data['current']['humidity']

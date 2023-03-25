@@ -108,6 +108,10 @@ p {
     background-color: transparent;
 }
 #home{
+    margin-top:8rem
+}
+
+#home-2{
     margin-top:10rem
 }
 #home h1{
@@ -237,4 +241,28 @@ p {
     #one h1{
 padding-top: 6rem;
     }
+}
+
+.main-text{
+
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+#home .main-text h1{
+font-size:10vw
+}
+
+#home-2{
+  background-color:#d3d3d3
+}
+
+#home-2 h1{
+ font-size:3.1vw
+}
+
+#home-2 h3{
+ font-size:1.8vw
 }
