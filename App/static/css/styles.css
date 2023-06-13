@@ -108,31 +108,24 @@ p {
     background-color: transparent;
 }
 #home{
-    margin-top:8rem
-}
-
-#home-2{
-    margin-top:10rem
+    margin-top:5rem;
+    height: 95vh;
+    position: relative;
 }
 #home h1{
-  font-size: 5rem;
-}
-#home img .avtaar{
-    height:20rem;
-    width: 20rem;
-}
-.skills img {
-    height:10rem
+  font-size: 10vw;
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%,-50%);
 }
 
 #intro h2{
-    font-size:5rem;margin-top:5rem
+    font-size:3vw;margin-top:5rem
 }
-#home .avtaar{
-    margin-top:8rem;height:25rem;width:25rem
-} 
+
 #intro p{
-    font-size:3rem;
+    font-size:1.5vw;
     margin: 3rem 5rem;
 }
 
@@ -203,17 +196,9 @@ p {
     
 }
 
-#one h1{
-    padding-top:17rem;
-    font-family: 'Fredoka One', cursive;
-    font-size:4.5rem;
-    
-}
 
-#one h3{
 
-    font-size:2.5rem;
-}
+
 @media(max-width:768px){
     #home h1{
         margin-top:8rem;
@@ -243,26 +228,157 @@ padding-top: 6rem;
     }
 }
 
-.main-text{
 
+#two{
+    height: 95vh;
+    display: grid;
+    grid-template-columns: 0.2fr 1fr 0.3fr 1fr 0.2fr;
+    grid-template-rows: 0.2fr 1fr 0.2fr 4fr 1fr 1fr;
+    grid-template-areas:
+    "blank6 blank6 blank6 blank6 blank6"
+    "blank1 heading heading heading blank2"
+    "blank1 blank7 blank7 blank7 blank2"
+    "blank1 image blank3 text blank2"
+    "blank1 blank5 blank5 button blank2"
+    "blank1 blank4 blank4 blank4 blank2";
+    grid-gap: 0.2rem;
+}
+
+#three{
+    height: 95vh;
+    display: grid;
+    grid-template-columns: 0.2fr 1fr 0.3fr 1fr 0.2fr;
+    grid-template-rows: 0.2fr 1fr 0.2fr 4fr 1fr 1fr;
+    grid-template-areas:
+    "blank6 blank6 blank6 blank6 blank6"
+    "blank1 heading heading heading blank2"
+    "blank1 blank7 blank7 blank7 blank2"
+    "blank1 text blank3 image blank2"
+    "blank1 button blank5 blank blank2"
+    "blank1 blank4 blank4 blank4 blank2";
+    grid-gap: 0.2rem;
+}
+
+#four{
+    height: 95vh;
+    display: grid;
+    grid-template-columns: 0.2fr 1fr 0.3fr 1fr 0.2fr;
+    grid-template-rows: 0.2fr 1fr 0.2fr 4fr 1fr 1fr;
+    grid-template-areas:
+    "blank6 blank6 blank6 blank6 blank6"
+    "blank1 heading heading heading blank2"
+    "blank1 blank7 blank7 blank7 blank2"
+    "blank1 image blank3 text blank2"
+    "blank1 blank5 blank5 button blank2"
+    "blank1 blank4 blank4 blank4 blank2";
+    grid-gap: 0.2rem;
+}
+
+#five{
+    height: 95vh;
+    display: grid;
+    grid-template-columns: 0.2fr 1fr 0.3fr 1fr 0.2fr;
+    grid-template-rows: 0.2fr 1fr 0.2fr 4fr 1fr 1fr;
+    grid-template-areas:
+    "blank6 blank6 blank6 blank6 blank6"
+    "blank1 heading heading heading blank2"
+    "blank1 blank7 blank7 blank7 blank2"
+    "blank1 text blank3 image blank2"
+    "blank1 button blank5 blank blank2"
+    "blank1 blank4 blank4 blank4 blank2";
+    grid-gap: 0.2rem;
+}
+
+.heading{
+    grid-area: heading;
+}
+
+.image{
+    grid-area: image;
+    
+}
+
+.svg{
+    height: 35vh;
+    margin-top: 5rem;
+}
+
+.text{
+    grid-area: text;
+    text-align: left;
+    font-size: 3rem;
+}
+
+.button{
+    grid-area: button;
+    text-align: left;
+}
+
+.button-design{
+    position: relative;
+    display: inline-block;
+    padding: 15px 30px;
+    color:#d1d4c9;
+    text-transform: uppercase;
+    letter-spacing: 4px;
+    font-size: 18px;
+    overflow: hidden;
+    transition: 0.2s;
+  }
+  .button-design:hover{
+    color : #d1d4c9;
+    background-color:#9c27b0;
+    box-shadow: 0 0 10px #9c27b0,0 0 40px #9c27b0,0 0 80px #9c27b0;
+    transition-delay:1s;
+  }
+  .button-design span{
     position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-}
-
-#home .main-text h1{
-font-size:10vw
-}
-
-#home-2{
-  background-color:#d3d3d3
-}
-
-#home-2 h1{
- font-size:3.1vw
-}
-
-#home-2 h3{
- font-size:1.8vw
-}
+    display: block;
+  }
+  .button-design span:nth-child(1){
+    top:0;
+    left:-100%;
+    width: 100%;
+    height: 2px;
+    background:  linear-gradient(90deg,transparent,#9c27b0);
+  }
+  .button-design:hover span:nth-child(1){
+    left:100%;
+    transition:1s;
+  }
+  .button-design span:nth-child(3){
+    bottom: 0;
+    right:-100%;
+    width: 100%;
+    height: 2px;
+    background:  linear-gradient(270deg,transparent,#9c27b0);
+  }
+  .button-design:hover span:nth-child(3){
+    right: 100%;
+    transition:1s;
+    transition-delay: 0.5s;
+  }
+  .button-design span:nth-child(2){
+    right:  0;
+    top:-100%;
+    height: 100%;
+    width:  2px;
+    background:  linear-gradient(180deg,transparent,#9c27b0);
+  }
+  .button-design:hover span:nth-child(2){
+    top: 100%;
+    transition:1s;
+    transition-delay: 0.25s;
+  }
+  .button-design span:nth-child(4){
+    left:  0;
+    bottom: -100%;
+    height: 100%;
+    width:  2px;
+    background:  linear-gradient(180deg,transparent,#9c27b0);
+  }
+  .button-design:hover span:nth-child(4){
+    bottom:  100%;
+    transition:1s;
+    transition-delay: 0.75s;
+  }

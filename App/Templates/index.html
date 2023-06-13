@@ -2,10 +2,10 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
+ <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/styles.css') }}">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/style.css') }}">
     <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/bootstrap.min.css') }}" >
     <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/ionicons.min.css') }}" >
     <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/styles.css') }}" >
@@ -14,7 +14,7 @@
     <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/progressbar.css') }}">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script src="https://unpkg.com/ionicons@5.4.0/dist/ionicons.js"></script>
-    <title>Document</title>
+    <title>{{title}}</title>
 </head>
 
 <body>
@@ -28,44 +28,152 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand page-scroll" href="#first" style="font-size:2.5rem"> CULTIVEST</a>
+                <a class="navbar-brand page-scroll" href="#first" style="font-size:2.5rem"> AGRIIFY</a>
             </div>
             <div class="navbar-collapse collapse" id="bs-navbar">
                 <ul class="nav navbar-nav">
                     <li>
-                        <a class="page-scroll" href="#one">Intro</a>
+                        <a class="page-scroll" href="#home">HOME</a>
                     </li>
                     <li>
-                        <a class="page-scroll" href="#two">Skills</a>
+                        <a class="page-scroll" href="#two">CROP RECOMMENDATION</a>
                     </li>
                     <li>
-                        <a class="page-scroll" href="#three">Work</a>
+                        <a class="page-scroll" href="#three">FERTLIZER SUGGESTION</a>
                     </li>
                     <li>
-                        <a class="page-scroll" href="#last">Contact</a>
+                        <a class="page-scroll" href="#four">DISEASE CLASSIFICATION</a>
+                    </li>
+                    <li>
+                        <a class="page-scroll" href="#five">ANALYTICS</a>
                     </li>
                 </ul>
                 <ul class="nav navbar-nav navbar-right">
                     <li>
                         <a class="page-scroll" data-toggle="modal"  title="A free Bootstrap video landing theme"
-                            href="pages/cv.html">CV</a>
+                            href="pages/cv.html">CONTACT</a>
                     </li>
                 </ul>
             </div>
         </div>
     </nav>
 
-    <div id="home" class="container text-center" style="color: #d1d4c9;height:40vh">
-        <div class="main-text">
-          <h1>CULTIVEST</h1>
+    <div id="home" class="container text-center" style="color: #d1d4c9">
+       
+        <h1>AGRIIFY</h1>
+       
+    </div>
+    <div style="width:100%;background-color:#d1d4c9">
+        <div id="intro" class="container text-center" style="color:#181818">
+            <h2 >Smart Farming for Better Yields and Healthier Crops</h2>
+
+            <p class="text-center">
+                AGRIIFY is an innovative smart farming app designed to help farmers make informed decisions about crop selection, fertilizers, and disease analysis. With AGRIIFY, farmers can get personalized recommendations for crops and fertilizers based on their soil type, climate, and location. The app also offers real-time disease analysis, enabling farmers to detect and treat diseases early, preventing damage to their crops.
+            </p>
+
         </div>
     </div>
-<!--    <div style="width:100%;background-color:#d1d4c9">-->
-<!--        <div  class="container text-center home-2" style="color:#181818">-->
 
+    <div id="two" class="container text-center">
+        <div class="heading">
+        <h1 style="font-size:5rem;color:#d1d4c9">CROP RECOMMENDATION</h1>
+        </div>
+        <div class="image">
+            <img src="{{ url_for('static', filename='images/growing-plant.png')}}" class="svg" alt="SVG image" >
+        </div>
+        <div class="text">
+               <h3>
+                Dear farmer, to improve your crop yields and increase profitability, try utilizing crop recommendation systems. They provide valuable insights on which crops to plant, when to plant them, and how to manage them. By optimizing your crop yields, you can enjoy consistent harvests and profitability. Crop recommendation systems help select crops that thrive in your growing conditions, leading to more sustainable farming.
+               </h3>
+               
+        </div>
+        <div class="button">
+            <a href="{{ url_for('cropjyotashi') }}" class="button-design">
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+                Recommend Me a Crop
+              </a>
+        </div>
+    </div>
 
-<!--        </div>-->
-<!--    </div>-->
+   
+    <div id="three" class="container is-size-5-desktop text-center" >
+        <div class="heading">
+            <h1 style="font-size:5rem;color:#d1d4c9">FERTLIZER SUGGESTION</h1>
+            </div>
+            <div class="image">
+                <img src="{{ url_for('static', filename='images/npk.png')}}" class="svg" alt="SVG image" >
+            </div>
+            <div class="text">
+                   <h3>
+                    Dear farmer, to improve your crop yields and increase profitability, try utilizing crop recommendation systems. They provide valuable insights on which crops to plant, when to plant them, and how to manage them. By optimizing your crop yields, you can enjoy consistent harvests and profitability. Crop recommendation systems help select crops that thrive in your growing conditions, leading to more sustainable farming.
+                   </h3>
+                   
+            </div>
+            <div class="button">
+                <a href="{{ url_for('fertilizerrecommendation') }}" class="button-design">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    SUGGEST ME A FERTLIZER
+                  </a>
+            </div>
+    </div>
+    
+    
+    <div id="four" class="container text-center">
+        <div class="heading">
+            <h1 style="font-size:5rem;color:#d1d4c9">DISEASE CLASSIFICATION</h1>
+            </div>
+            <div class="image">
+                <img src="{{ url_for('static', filename='images/pest_2.png')}}" class="svg" alt="SVG image" >
+            </div>
+            <div class="text">
+                <h3>
+                    Dear farmer, Agriify is an app that uses image recognition and machine learning to detect crop diseases early on. It provides an accurate diagnosis for timely action, helping you to protect your crops and ensure a successful harvest. Agriify saves time and money, and safeguards your livelihoods. Click on Plant Doctor and stay ahead of crop diseases and ensure the health and productivity of your crops.    
+                </h3>
+                   
+            </div>
+            <div class="button">
+                <a href="{{ url_for('plantdoctor') }}" class="button-design">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    PLANT DOCTOR
+                  </a>
+            </div>
+       
+    </div>
+    
+    <div id="five" class="container text-center">
+        <div class="heading">
+            <h1 style="font-size:5rem;color:#d1d4c9">ANALYTICS</h1>
+            </div>
+            <div class="image">
+                <img src="{{ url_for('static', filename='images/graph.png')}}" class="svg" alt="SVG image" >
+            </div>
+            <div class="text">
+                   <h3>
+                    Dear farmer, to improve your crop yields and increase profitability, try utilizing crop recommendation systems. They provide valuable insights on which crops to plant, when to plant them, and how to manage them. By optimizing your crop yields, you can enjoy consistent harvests and profitability. Crop recommendation systems help select crops that thrive in your growing conditions, leading to more sustainable farming.
+                   </h3>
+                   
+            </div>
+            <div class="button">
+                <a href="{{ url_for('liveanaytics') }}" class="button-design">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    Live Analytics
+                  </a>
+            </div>
+            
+    </div>
+    
 
     <script src="{{ url_for('static', filename='js/jquery.min.js') }}"></script>
     <script src="{{ url_for('static', filename='js/bootstrap.min.js') }}"></script>

@@ -1,0 +1,105 @@
+.crop{
+    background-color: #181818;
+    font-family: 'Questrial','Helvetica Neue',Arial,sans-serif;
+    color: #eee;
+    overflow: hidden;
+}
+
+
+
+form {
+    max-width: 400px;
+    margin: 0 auto;
+    font-family: 'Questrial','Helvetica Neue',Arial,sans-serif;
+}
+
+/* Form label style */
+
+
+/* Form input style */
+input[type="number"],
+select {
+    width: 100%;
+    padding: 4px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    margin-bottom: 10px;
+}
+
+/* Form select style */
+select {
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    background-position: right center;
+    background-color: #fff;
+}
+
+/* Form submit button style */
+button[type="submit"] {
+    width:15rem;
+    background-color: #9c27b0;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+/* Form submit button hover effect */
+button[type="submit"]:hover {
+    background-color: #8b27b0;
+}
+
+.main-crop{
+    margin-top: 10vh;
+}
+
+.main-crop .heading{
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 10vh;
+    color: #eee;
+}
+
+.main-crop .headingh2{
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 5vh;
+    color: #eee;
+}
+
+
+.CropResultPage{
+    background-color: #181818;
+    position: relative;
+    font-family: 'Questrial','Helvetica Neue',Arial,sans-serif;
+    color: #eee;
+    overflow: hidden;
+}
+
+
+.CropResult{
+     align-text:center;
+     position: absolute;
+     top:50%;
+     left:50%;
+     transform: translate(-50%, -50%);
+}
+
+@media(max-width:768px) {
+.CropResultPage, .crop{
+    overflow:visible;
+}
+.main-crop{
+    margin-top: 20vh;
+    padding-bottom:5vh
+}
+}
+
+.main-crop #output-image{
+    height:10vh
+    border-radius: 50%;
+}

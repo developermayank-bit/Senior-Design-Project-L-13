@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html>
+<head>
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/style.css') }}">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/bootstrap.min.css') }}" >
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/ionicons.min.css') }}" >
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/styles.css') }}" >
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/Utils.css') }}" >
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka+One&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/progressbar.css') }}">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://unpkg.com/ionicons@5.4.0/dist/ionicons.js"></script>
+    <script src="{{ url_for('static', filename='js/cities.js') }}"></script>
+    <title>{{title}}</title>
+</head>
+<body class="crop">
+<nav id="topNav" class="navbar navbar-default navbar-fixed-top">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-navbar">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand page-scroll" href="#first" style="font-size:2.5rem"> AGRIIFY</a>
+            </div>
+            <div class="navbar-collapse collapse" id="bs-navbar">
+                <ul class="nav navbar-nav">
+                    <li>
+                        <a class="page-scroll" href="{{ url_for('home') }}">HOME</a>
+                    </li>
+                    <li>
+                        <a class="page-scroll" href="#two">CROP RECOMMENDATION</a>
+                    </li>
+                    <li>
+                        <a class="page-scroll" href="#three">FERTLIZER SUGGESTION</a>
+                    </li>
+                    <li>
+                        <a class="page-scroll" href="index#four">DISEASE CLASSIFICATION</a>
+                    </li>
+                    <li>
+                        <a class="page-scroll" href="#five">ANALYTICS</a>
+                    </li>
+                </ul>
+                <ul class="nav navbar-nav navbar-right">
+                    <li>
+                        <a class="page-scroll" data-toggle="modal"  title="A free Bootstrap video landing theme"
+                            href="pages/cv.html">CONTACT</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+<div class="main-crop">
+
+	<h1 class="heading">Get informed advice on fertilizer based on soil</h1>
+<form method="POST" style="margin-top:5rem" action="{{ url_for('fertrecommend') }}">
+		<label for="nitrogen">Nitrogen:</label>
+		<input
+		type="number"
+        class="form-control"
+        id="nitrogen"
+        name="nitrogen"
+        placeholder="Enter the value (example:50)"
+        style="font-weight: bold"
+        required
+		>
+
+		<label for="phosphorous">Phosphorus:</label>
+		<input
+		type="number"
+        class="form-control"
+        id="phosphorous"
+        name="phosphorous"
+        placeholder="Enter the value (example:50)"
+        style="font-weight: bold"
+        required
+		>
+
+		<label for="pottasium">Potassium:</label>
+		<input
+		type="number"
+        class="form-control"
+        id="pottasium"
+        name="pottasium"
+        placeholder="Enter the value (example:50)"
+        style="font-weight: bold"
+        required
+		>
+
+      <label for="crop">Crop you want to grow</label>
+      <select
+        name="cropname"
+        class="form-control"
+        id="crop"
+        placeholder="Select a crop"
+        required
+      >
+        <option selected>Select crop</option>
+        <option>rice</option>
+        <option>maize</option>
+        <option>chickpea</option>
+        <option>kidneybeans</option>
+        <option>pigeonpeas</option>
+        <option>mothbeans</option>
+        <option>mungbean</option>
+        <option>blackgram</option>
+        <option>lentil</option>
+        <option>pomegranate</option>
+        <option>banana</option>
+        <option>mango</option>
+        <option>grapes</option>
+        <option>watermelon</option>
+        <option>muskmelon</option>
+        <option>apple</option>
+        <option>orange</option>
+        <option>papaya</option>
+        <option>coconut</option>
+        <option>cotton</option>
+        <option>jute</option>
+        <option>coffee</option>
+      </select>
+
+    <div class="d-flex justify-content-center">
+      <button
+        type="submit"
+      >
+        Predict
+      </button>
+    </div>
+  </form>
+</div>
+
+ <script src="{{ url_for('static', filename='js/jquery.min.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/bootstrap.min.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/jquery.easing.min.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/wow.js') }}"></script>
+    <script src="{{ url_for('static', filename='main.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/scripts.js') }}"></script>
+
+</body>
+</html>
+
